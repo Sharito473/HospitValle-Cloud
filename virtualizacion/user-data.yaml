@@ -1,0 +1,13 @@
+#cloud-config
+hostname: nodos_hospitvalle
+users:
+  - name: estudiante
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    shell: /bin/bash
+    lock_passwd: false
+    plain_text_passwd: hospitvalle
+ssh_pwauth: true
+manage_etc_hosts: true
+package_update: true
+packages:
+  - sysbench
