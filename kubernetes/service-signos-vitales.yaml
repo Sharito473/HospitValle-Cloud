@@ -1,0 +1,12 @@
+# service-signos-vitales.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: signos-vitales-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: api-signos-vitales
+  ports:
+  - port: 80
+    targetPort: 5000
